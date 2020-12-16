@@ -8,7 +8,7 @@ var initialSet = data.Count;
 var initialIndex = 0;
 var numbers = data.ToDictionary(n => n, n => ++initialIndex);
 
-for (var index = initialSet; index < 2020; index++)
+for (var index = initialSet; index < 30000000; index++)
 {
     var number = data[index - 1];
 
@@ -27,6 +27,6 @@ for (var index = initialSet; index < 2020; index++)
     }
 }
 
-Console.WriteLine(data.Aggregate("", (curr, next) => curr += next.ToString() + ", "));
+// Console.WriteLine(data.Aggregate("", (curr, next) => curr += next.ToString() + ", "));
 Console.WriteLine(data.Last());
 
